@@ -1,4 +1,4 @@
-# twitch-gs
+# gs-metorship-twitch
 
 ## Project setup
 ```
