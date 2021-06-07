@@ -2,7 +2,8 @@
   <div id="nav">
     <router-link to="/login">Login</router-link> |
     <router-link to="/overlay">Overlay</router-link> |
-    <router-link to="/commands">Commands</router-link>
+    <router-link to="/commands">Commands</router-link> |
+    <router-link to="/redirect">Redirect</router-link>
   </div>
   <router-view />
 </template>

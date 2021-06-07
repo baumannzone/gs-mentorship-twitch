@@ -13,6 +13,10 @@ const routerOptions = [
     path: "/commands",
     name: "Commands",
   },
+  {
+    path: "/redirect",
+    name: "Redirect",
+  },
 ];
 
 const routes = routerOptions.map((route) => ({
