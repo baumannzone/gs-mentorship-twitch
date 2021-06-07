@@ -1,10 +1,10 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/login">Login</router-link> |
+    <router-link to="/overlay">Overlay</router-link> |
+    <router-link to="/commands">Commands</router-link>
   </div>
   <router-view />
-  <footer>El footer</footer>
 </template>
 
 <style lang="less">
