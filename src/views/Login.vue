@@ -11,7 +11,7 @@ export default {
       const baseUrl = "https://id.twitch.tv/oauth2/authorize";
       const params = {
         client_id: process.env.VUE_APP_CLIENT_ID,
-        redirect_uri: "http://localhost:8080/#/redirect",
+        redirect_uri: "http://localhost:8080/#/redirect/",
         response_type: "token",
         scope: "chat:edit chat:read",
       };
