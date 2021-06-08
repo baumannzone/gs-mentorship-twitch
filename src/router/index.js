@@ -2,6 +2,10 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 const routerOptions = [
   {
+    path: "/",
+    name: "Home",
+  },
+  {
     path: "/login",
     name: "Login",
   },

@@ -1,5 +1,5 @@
 <template>
-  <div>Coomands vieew</div>
+  <div>Commands view</div>
 </template>
 
 <script>
