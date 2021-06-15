@@ -1,7 +1,5 @@
 <template>
-  <div>Login view</div>
-  <hr />
-  <a :href="loginUrl">Login</a>
+  <a :href="loginUrl">Click to login</a>
 </template>
 
 <script>
