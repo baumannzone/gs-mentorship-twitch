@@ -1,5 +1,7 @@
 <template>
-  <div>Redirecs view</div>
+  <pre>
+    {{ $route }}
+  </pre>
 </template>
 
 <script>
