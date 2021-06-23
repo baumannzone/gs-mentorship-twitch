@@ -1,29 +1,35 @@
 <template>
   <div>
-    <button @click="f">Save token</button>
-    <button @click="getStoreToken">Show token</button>
-    <h2>{{ tokenFromStore }}</h2>
-    <pre>
+    <!-- <h2>{{ tokenFromStore }}</h2> -->
+    <!-- <pre>
       {{ $route }}
-    </pre>
+    </pre> -->
+    <Spinner :start="!this.tokenFromStore" />
   </div>
 </template>
 
 <script>
 import { mapMutations } from "vuex";
+import Spinner from "@/components/Spinner.vue";
 export default {
   created() {
     // Loading...
     const fullPath = this.$route.fullPath;
     const token = fullPath.split("#access_token=")[1].split("&")[0];
-    this.SET_TWITCH_TOKEN(token);
-    this.$router.push({ name: "Overlay" });
+    setTimeout(() => {
+      this.SET_TWITCH_TOKEN(token);
+      this.tokenFromStore = this.$store.state.twitchToken;
+    }, 3000);
+    console.log(this.tokenFromStore);
   },
   data() {
     return {
       token: null,
       tokenFromStore: null,
     };
+  },
+  components: {
+    Spinner,
   },
   methods: {
     ...mapMutations(["SET_TWITCH_TOKEN"]),
