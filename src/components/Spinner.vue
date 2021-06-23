@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="start">
     <div class="lds-ring">
       <div></div>
       <div></div>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  setup() {},
+  props: ["start"],
 };
 </script>
 
