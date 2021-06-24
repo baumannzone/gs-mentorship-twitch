@@ -4,7 +4,7 @@
 
 <script>
 import { mapGetters } from "vuex";
-import * as tmi from "tmi";
+const tmi = require("tmi.js");
 import dotenv from "dotenv";
 
 export default {
@@ -14,6 +14,7 @@ export default {
     /* eslint-disable no-prototype-builtins */
     /* eslint-disable no-unused-vars */
     dotenv.config();
+    console.log(this.getTwitchToken());
 
     const BOT_NAME = "botmannzone";
     const BAUMANNZONE = "baumannzone";
@@ -26,7 +27,7 @@ export default {
       },
       identity: {
         username: BOT_NAME,
-        password: process.env.CHTA_BOT_ACCESS_TOKEN,
+        password: process.env.CHAT_BOT_ACCESS_TOKEN || this.getTwitchToken(),
       },
       channels: [BAUMANNZONE, GUIDESMITHS],
     });
@@ -181,7 +182,7 @@ export default {
       }
     });
   },
-  computed: {
+  methods: {
     ...mapGetters(["getTwitchToken"]),
   },
 };
