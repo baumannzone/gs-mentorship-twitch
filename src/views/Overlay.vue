@@ -1,9 +1,18 @@
 <template>
-  <div>Overlay view</div>
+  <div>
+    Overlay view
+    <Bot command="Hola" />
+  </div>
 </template>
 
 <script>
-export default {};
+import Bot from "@/components/Bot.vue";
+
+export default {
+  components: {
+    Bot,
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
