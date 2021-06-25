@@ -10,6 +10,9 @@ const redirect =
     ? "http://localhost:8080/#/redirect/"
     : "https://gs-mentorship-twitch.vercel.app/#/redirect/";
 
+console.log(NODE_ENV);
+console.log(redirect);
+
 export default {
   computed: {
     loginUrl() {
