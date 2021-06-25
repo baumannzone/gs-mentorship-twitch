@@ -1,9 +1,18 @@
 <template>
-  <div>Overlay view</div>
+  <div>
+    Overlay view
+    <TwChatBot />
+  </div>
 </template>
 
 <script>
-export default {};
+import TwChatBot from "@/components/TwChatBot.vue";
+
+export default {
+  components: {
+    TwChatBot,
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>

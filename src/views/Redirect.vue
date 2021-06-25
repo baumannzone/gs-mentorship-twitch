@@ -1,16 +1,17 @@
 <template>
   <div>
-    <!-- <h2>{{ tokenFromStore }}</h2> -->
+    <h2>{{ getTwitchToken }}</h2>
     <!-- <pre>
       {{ $route }}
     </pre> -->
-    <Spinner :start="!this.tokenFromStore" />
+    <Spinner :start="!this.getTwitchToken" />
   </div>
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 import Spinner from "@/components/Spinner.vue";
+
 export default {
   created() {
     // Loading...
@@ -18,9 +19,10 @@ export default {
     const token = fullPath.split("#access_token=")[1].split("&")[0];
     setTimeout(() => {
       this.SET_TWITCH_TOKEN(token);
-      this.tokenFromStore = this.$store.state.twitchToken;
     }, 3000);
-    console.log(this.tokenFromStore);
+  },
+  computed: {
+    ...mapGetters(["getTwitchToken"]),
   },
   data() {
     return {

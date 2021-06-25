@@ -3,13 +3,20 @@
 </template>
 
 <script>
+const NODE_ENV = process.env.NODE_ENV;
+
+const redirect =
+  NODE_ENV === "development"
+    ? "http://localhost:8080/#/redirect/"
+    : "https://gs-mentorship-twitch.vercel.app/#/redirect/";
+
 export default {
   computed: {
     loginUrl() {
       const baseUrl = "https://id.twitch.tv/oauth2/authorize";
       const params = {
         client_id: process.env.VUE_APP_CLIENT_ID,
-        redirect_uri: "http://localhost:8080/#/redirect/",
+        redirect_uri: redirect,
         response_type: "token",
         scope: "chat:edit chat:read",
       };
