@@ -1,5 +1,5 @@
 <template>
-  {{ this.command }}
+  {{ this.text }}
 </template>
 
 <script>
@@ -8,7 +8,11 @@ const tmi = require("tmi.js");
 import dotenv from "dotenv";
 
 export default {
-  props: ["command"],
+  data() {
+    return {
+      text: "value",
+    };
+  },
   created() {
     /* eslint-disable no-prototype-builtins */
     /* eslint-disable no-prototype-builtins */

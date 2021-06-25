@@ -1,16 +1,16 @@
 <template>
   <div>
     Overlay view
-    <Bot command="Hola" />
+    <TwChatBot />
   </div>
 </template>
 
 <script>
-import Bot from "@/components/Bot.vue";
+import TwChatBot from "@/components/TwChatBot.vue";
 
 export default {
   components: {
-    Bot,
+    TwChatBot,
   },
 };
 </script>
